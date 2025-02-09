@@ -2,6 +2,7 @@ import streamlit as st
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import numpy as np
 
 st.set_page_config(layout="wide")
 st.header("KWORB EXTRACT DATA")
@@ -51,7 +52,8 @@ df = pd.DataFrame({
 })
 
 df['Streams totales'] = df['Streams totales'].astype(int)
-df['Streams diarios'] = df['Streams diarios'].fillna(0)
+df['Streams diarios'] = df['Streams diarios'].replace(np.nan, 0)
+
 st.write(df['Streams diarios'])
 df['Streams diarios'] = df['Streams diarios'].astype(int)
 
