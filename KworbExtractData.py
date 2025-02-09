@@ -1,5 +1,6 @@
 import streamlit as st
 from bs4 import BeautifulSoup
+import requests
 
 st.header("KWORB EXTRACT DATA")
 st.divider()
