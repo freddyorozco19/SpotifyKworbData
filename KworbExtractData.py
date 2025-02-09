@@ -51,6 +51,8 @@ df = pd.DataFrame({
 })
 
 df['Streams totales'] = df['Streams totales'].astype(int)
+df['Streams diarios'] = df['Streams diarios'].fillna(0)
 df['Streams diarios'] = df['Streams diarios'].astype(int)
+
 
 st.dataframe(df)
