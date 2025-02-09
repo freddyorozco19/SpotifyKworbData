@@ -37,8 +37,8 @@ for fila in filas:
         if titulo:
             canciones.append(titulo.text)
             urls.append(titulo['href'])
-            streams_totales.append(int(celdas[1].text.replace(',', '')))
-            streams_diarios.append(int(celdas[2].text.replace(',', '')))
+            streams_totales.append(int(celdas[1].text.replace(",", "")))
+            streams_diarios.append(int(celdas[2].text.replace(",", "")))
 
 # Crear el DataFrame
 df = pd.DataFrame({
