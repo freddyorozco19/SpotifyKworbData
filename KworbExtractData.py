@@ -15,7 +15,7 @@ respuesta = requests.get(url)
 html = respuesta.text
 
 # Crear el objeto BeautifulSoup
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(html, 'html.parser', from_encoding='utf-8')
 
 # Listas para almacenar los datos
 canciones = []
