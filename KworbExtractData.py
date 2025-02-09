@@ -36,7 +36,8 @@ for fila in filas:
         # Para el título de la canción (está dentro de un enlace)
         titulo = celdas[0].find('a')
         if titulo:
-            canciones.append(titulo.text)
+            nombre_cancion = titulo.text.encode('latin1').decode('utf-8')
+            canciones.append(nombre_cancion.text)
             urls.append(titulo['href'])
             streams_totales.append(celdas[1].text.replace(",", ""))
             streams_diarios.append(celdas[2].text.replace(",", ""))
