@@ -39,6 +39,8 @@ for fila in filas:
             urls.append(titulo['href'])
             streams_totales.append(celdas[1].text.replace(",", ""))
             streams_diarios.append(celdas[2].text.replace(",", ""))
+            
+
 
 # Crear el DataFrame
 df = pd.DataFrame({
@@ -47,5 +49,8 @@ df = pd.DataFrame({
     'Streams totales': streams_totales,
     'Streams diarios': streams_diarios
 })
+
+df['Streams totales'] = df['Streams totales'].astype(int)
+df['Streams diarios'] = df['Streams diarios'].astype(int)
 
 st.dataframe(df)
