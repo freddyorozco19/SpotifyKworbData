@@ -52,5 +52,5 @@ df['Streams diarios'] = df['Streams diarios'].astype(int)
 
 
 st.dataframe(df)
-st.metric("Date", 
+#st.metric("Date")
 st.divider()
