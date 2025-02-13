@@ -9,7 +9,6 @@ st.header("KWORB EXTRACT DATA")
 st.divider()
 
 url = st.text_input("URL")
-
 # Obtener el contenido de la página
 respuesta = requests.get(url)
 html = respuesta.text
@@ -20,10 +19,8 @@ canciones = []
 urls = []
 streams_totales = []
 streams_diarios = []
-
 # Encontrar todas las filas (tr) de la tabla
 filas = soup.find_all('tr')
-
 # Recorrer cada fila y extraer la información
 for fila in filas:
     # Encontrar todas las celdas (td) en la fila
