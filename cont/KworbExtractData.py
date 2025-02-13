@@ -4,7 +4,6 @@ import requests
 import pandas as pd
 import numpy as np
 
-st.set_page_config(layout="wide")
 st.header("KWORB EXTRACT DATA")
 st.divider()
 
