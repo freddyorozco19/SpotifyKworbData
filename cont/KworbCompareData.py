@@ -4,8 +4,7 @@ import requests
 import pandas as pd
 import numpy as np
 
-st.set_page_config(layout="wide")
-st.header("KWORB EXTRACT DATA")
+st.header("KWORB COMPARE DATA")
 st.divider()
 
 url = st.text_input("URL")
