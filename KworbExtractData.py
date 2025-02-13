@@ -9,6 +9,7 @@ st.header("KWORB EXTRACT DATA")
 st.divider()
 
 url = st.text_input("URL")
+
 # Obtener el contenido de la página
 respuesta = requests.get(url)
 html = respuesta.text
