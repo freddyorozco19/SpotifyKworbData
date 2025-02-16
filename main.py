@@ -23,10 +23,8 @@ import requests
 #from PIL import Image
 from matplotlib.patches import Rectangle
 import math
-
 ############################################################################################################################################################################################################################
 st.set_page_config(layout="wide")
-
 navigation_tree = {
     "Menu": [
         st.Page("cont/KworbExtractData.py", title="Artist Data", icon=":material/download:"),
