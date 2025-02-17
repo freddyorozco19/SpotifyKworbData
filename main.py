@@ -32,7 +32,5 @@ navigation_tree = {
         #st.Page("cont/FitStats.py", title="Fit Stats", icon=":material/analytics:"),
         st.Page("cont/KworbCompareData.py", title="Register Data", icon=":material/leaderboard:")]
 }
-
 nav = st.navigation(navigation_tree, position="sidebar")
-
 nav.run()
