@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 import numpy as np
+import re
 
 st.header("KWORB EXTRACT DATA")
 st.divider()
@@ -53,4 +54,10 @@ df['Streams diarios'] = df['Streams diarios'].astype(int)
 
 st.dataframe(df)
 #st.metric("Date")
+subcontainers = soup.find_all('div', class_='subcontainer')
+for subcontainer in subcontainers:
+    full_text = subcontainer.get_text()
+date_match = re.search(r'Last updated:\s*(\d{4}/\d{2}/\d{2})', full_text)
+date_match = date_match.group(1)
+st.write(date_match)
 st.divider()
