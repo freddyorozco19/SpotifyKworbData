@@ -26,7 +26,6 @@ filas = soup.find_all('tr')
 for fila in filas:
     # Encontrar todas las celdas (td) en la fila
     celdas = fila.find_all('td')
-    
     # Si la fila tiene celdas, procesarla
     if celdas:
         # Para el título de la canción (está dentro de un enlace)
@@ -36,8 +35,6 @@ for fila in filas:
             urls.append(titulo['href'])
             streams_totales.append(celdas[1].text.replace(",", ""))
             streams_diarios.append(celdas[2].text.replace(",", ""))
-            
-
 
 # Crear el DataFrame
 df = pd.DataFrame({
